@@ -114,6 +114,7 @@ class GameViewController: UIViewController {
             let pepperoniImage = UIImage(named: newPepperoni)
             let pepperoniNew = UIImageView(image: pepperoniImage)
             pepperoniNew.frame = pepperoniOutlet.frame
+            pepperoniNew.contentMode = pepperoniOutlet.contentMode
             pepperoniNew.tag = tags
             view.addSubview(pepperoniNew)
             
@@ -138,6 +139,7 @@ class GameViewController: UIViewController {
             let pepperImage = UIImage(named: newPepper)
             let pepperNew = UIImageView(image: pepperImage)
             pepperNew.frame = pepperOutlet.frame
+            pepperNew.contentMode = pepperOutlet.contentMode
             pepperNew.tag = tags
             view.addSubview(pepperNew)
             
@@ -162,6 +164,7 @@ class GameViewController: UIViewController {
             let onionImage = UIImage(named: newOnion)
             let onionNew = UIImageView(image: onionImage)
             onionNew.frame = onionOutlet.frame
+            onionNew.contentMode = onionOutlet.contentMode
             onionNew.tag = tags
             view.addSubview(onionNew)
             
@@ -185,11 +188,13 @@ class GameViewController: UIViewController {
             let oliveImage = UIImage(named: newOlive)
             let oliveNew = UIImageView(image: oliveImage)
             oliveNew.frame = oliveOutlet.frame
+            oliveNew.contentMode = oliveOutlet.contentMode
             oliveNew.tag = tags
             view.addSubview(oliveNew)
             
             oliveOutlet.center.x = 135
             oliveOutlet.center.y = 760
+            
             
             oliveOn += 1;
             tags += 1;
