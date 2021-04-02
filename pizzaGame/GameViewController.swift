@@ -21,16 +21,11 @@ class GameViewController: UIViewController {
     @IBOutlet weak var pepperLabel: UILabel!
     @IBOutlet weak var oliveLabel: UILabel!
     
-    
     @IBOutlet weak var button: UIButton!
     
-    
     @IBOutlet weak var pepperoniOutlet: UIImageView!
-    
     @IBOutlet weak var onionOutlet: UIImageView!
-    
     @IBOutlet weak var oliveOutlet: UIImageView!
-    
     @IBOutlet weak var pepperOutlet: UIImageView!
     
     public var scoreHandler: ((Int) -> Void)?
@@ -92,12 +87,22 @@ class GameViewController: UIViewController {
         pepperOutlet.addGestureRecognizer(pepperPanGesture)
         oliveOutlet.addGestureRecognizer(olivePanGesture)
         onionOutlet.addGestureRecognizer(onionPanGesture)
+        
+        NSLog("x is " + pepperOutlet.center.x.description)
+        NSLog("y is " + pepperOutlet.center.y.description)
+        
+        NSLog("x is " + onionOutlet.center.x.description)
+        NSLog("y is " + onionOutlet.center.y.description)
+        
+        NSLog("x is " + oliveOutlet.center.x.description)
+        NSLog("y is " + oliveOutlet.center.y.description)
 
         gameTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(GameViewController.startGameTimer), userInfo: nil, repeats: true)
         
     }
     
     @objc func dragPepperoni(_ sender:UIPanGestureRecognizer){
+        
         
         let translation = sender.translation(in: self.view)
         self.view.bringSubviewToFront(pepperoniOutlet)
@@ -112,8 +117,9 @@ class GameViewController: UIViewController {
             pepperoniNew.tag = tags
             view.addSubview(pepperoniNew)
             
-            //pepperoniOutlet.center.x = -71.5
-            //pepperoniOutlet.center.y = 219.5
+            pepperoniOutlet.center.x = 135.5
+            pepperoniOutlet.center.y = 667.5
+            
             pepperoniOn += 1;
             tags += 1;
 
@@ -134,6 +140,9 @@ class GameViewController: UIViewController {
             pepperNew.frame = pepperOutlet.frame
             pepperNew.tag = tags
             view.addSubview(pepperNew)
+            
+            pepperOutlet.center.x = 280
+            pepperOutlet.center.y = 760.5
             
             pepperOn += 1;
             tags += 1;
@@ -156,6 +165,9 @@ class GameViewController: UIViewController {
             onionNew.tag = tags
             view.addSubview(onionNew)
             
+            onionOutlet.center.x = 281
+            onionOutlet.center.y = 673
+            
             onionOn += 1;
             tags += 1;
 
@@ -175,6 +187,9 @@ class GameViewController: UIViewController {
             oliveNew.frame = oliveOutlet.frame
             oliveNew.tag = tags
             view.addSubview(oliveNew)
+            
+            oliveOutlet.center.x = 135
+            oliveOutlet.center.y = 760
             
             oliveOn += 1;
             tags += 1;
@@ -203,7 +218,6 @@ class GameViewController: UIViewController {
     @IBAction func checkPizza(_ sender: Any) {
         
         while tags >= 1 {
-            NSLog("Removing imageview with tag " + String(tags))
             let viewWithTag = self.view.viewWithTag(tags)
             viewWithTag?.removeFromSuperview()
             tags -= 1
