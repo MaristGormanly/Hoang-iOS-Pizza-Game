@@ -10,12 +10,17 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var animatedPizza: UIImageView!
+    
     var playerName = ""
 
     @IBOutlet weak var usernameText: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //load our aniamted gif using the framework in "Swift+Gif.swift"
+        animatedPizza.loadGif(name: "pizzaSliceAnimated")
     }
 
     //go to the game screen

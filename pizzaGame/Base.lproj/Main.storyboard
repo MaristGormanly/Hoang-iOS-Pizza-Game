@@ -60,16 +60,6 @@
                                     <action selector="showHiScores" destination="BYZ-38-t0r" eventType="touchUpInside" id="pfD-h9-YDT"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2tc-ff-OAK">
-                                <rect key="frame" x="107" y="332" width="200" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="5nk-yr-E7v"/>
-                                    <constraint firstAttribute="height" constant="50" id="9sd-2Z-rP2"/>
-                                </constraints>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6v9-Lk-zOM">
                                 <rect key="frame" x="107" y="539" width="200" height="50"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -91,11 +81,29 @@
                                     <action selector="exitApp" destination="BYZ-38-t0r" eventType="touchUpInside" id="Od2-mL-A1g"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2tc-ff-OAK">
+                                <rect key="frame" x="107" y="332" width="200" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="5nk-yr-E7v"/>
+                                    <constraint firstAttribute="height" constant="50" id="9sd-2Z-rP2"/>
+                                </constraints>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cNV-3c-Td4">
+                                <rect key="frame" x="87" y="670" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="Cy0-3d-lYY"/>
+                                    <constraint firstAttribute="width" constant="240" id="z8V-8O-vWf"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.76566547927461137" green="0.25616083441378013" blue="0.20053148216145569" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="OAh-p3-ryK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="10p-dt-Bu0"/>
                             <constraint firstItem="2tc-ff-OAK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-91" id="2fK-UT-APk"/>
+                            <constraint firstItem="cNV-3c-Td4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="286" id="39r-CW-Pk5"/>
                             <constraint firstItem="Kt6-TC-UYh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9Cr-xM-Ts3"/>
                             <constraint firstItem="6v9-Lk-zOM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Avk-sy-Lcm"/>
                             <constraint firstItem="OAh-p3-ryK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="D2X-SM-0FI"/>
@@ -103,12 +111,14 @@
                             <constraint firstItem="9f1-eM-0mJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Rvw-EE-eng"/>
                             <constraint firstItem="9f1-eM-0mJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="58" id="Yhf-hi-RU4"/>
                             <constraint firstItem="Kt6-TC-UYh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="qsj-1b-hSd"/>
+                            <constraint firstItem="cNV-3c-Td4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="y0U-P4-Hbm"/>
                             <constraint firstItem="2tc-ff-OAK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yHg-wq-hiW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OAh-p3-ryK" secondAttribute="trailing" constant="20" id="zwk-sB-BBK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="animatedPizza" destination="cNV-3c-Td4" id="0mk-ma-Pvb"/>
                         <outlet property="usernameText" destination="2tc-ff-OAK" id="sj7-EL-cT0"/>
                     </connections>
                 </viewController>
@@ -820,7 +830,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eo8-AQ-l6e">
-                                <rect key="frame" x="107" y="494" width="200" height="50"/>
+                                <rect key="frame" x="107" y="481" width="200" height="50"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="9bv-Sa-a3d"/>
@@ -831,30 +841,11 @@
                                     <constraint firstAttribute="width" constant="200" id="wO7-40-LD0"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                <state key="normal" title="Hi-Scores">
+                                <state key="normal" title="Submit Hi-Score">
                                     <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="showHiScores" destination="dJ8-Hl-MHj" eventType="touchUpInside" id="odY-8D-kfg"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xjj-Af-ab4">
-                                <rect key="frame" x="107" y="564" width="200" height="50"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="8lI-Ks-jRJ"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="IC1-5g-h8e"/>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="aYO-tB-jtX"/>
-                                    <constraint firstAttribute="width" constant="200" id="bXN-vL-WNv"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="gFG-tD-VSO"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="hLZ-6l-D9T"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                <state key="normal" title="Play Again">
-                                    <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="startGame" destination="dJ8-Hl-MHj" eventType="touchUpInside" id="Njb-Em-OEW"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jGM-cM-O0M">
@@ -875,17 +866,36 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xjj-Af-ab4">
+                                <rect key="frame" x="107" y="539" width="200" height="50"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="8lI-Ks-jRJ"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="IC1-5g-h8e"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="aYO-tB-jtX"/>
+                                    <constraint firstAttribute="width" constant="200" id="bXN-vL-WNv"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="gFG-tD-VSO"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="hLZ-6l-D9T"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <state key="normal" title="Play Again">
+                                    <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startGame" destination="dJ8-Hl-MHj" eventType="touchUpInside" id="Njb-Em-OEW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="eo8-AQ-l6e" firstAttribute="centerY" secondItem="gKe-MI-ehR" secondAttribute="centerY" constant="71" id="0mj-Sl-raH"/>
-                            <constraint firstItem="xjj-Af-ab4" firstAttribute="centerY" secondItem="gKe-MI-ehR" secondAttribute="centerY" constant="141" id="57v-LO-gPA"/>
                             <constraint firstItem="55W-sf-hRM" firstAttribute="centerY" secondItem="gKe-MI-ehR" secondAttribute="centerY" constant="-249.5" id="85a-VO-Ent"/>
+                            <constraint firstItem="eo8-AQ-l6e" firstAttribute="centerX" secondItem="gKe-MI-ehR" secondAttribute="centerX" id="Hzw-UF-rxW"/>
+                            <constraint firstItem="xjj-Af-ab4" firstAttribute="centerX" secondItem="gKe-MI-ehR" secondAttribute="centerX" id="Sgj-z3-MLx"/>
                             <constraint firstItem="zuf-HL-VbJ" firstAttribute="centerX" secondItem="gKe-MI-ehR" secondAttribute="centerX" id="UQ2-w2-9WQ"/>
-                            <constraint firstItem="xjj-Af-ab4" firstAttribute="centerX" secondItem="gKe-MI-ehR" secondAttribute="centerX" id="VEv-FB-qGm"/>
+                            <constraint firstItem="xjj-Af-ab4" firstAttribute="centerY" secondItem="gKe-MI-ehR" secondAttribute="centerY" constant="116" id="aUH-VN-y7e"/>
+                            <constraint firstItem="eo8-AQ-l6e" firstAttribute="centerY" secondItem="gKe-MI-ehR" secondAttribute="centerY" constant="58" id="beV-6K-gO7"/>
                             <constraint firstItem="55W-sf-hRM" firstAttribute="centerX" secondItem="gKe-MI-ehR" secondAttribute="centerX" id="jin-2w-4kS"/>
                             <constraint firstItem="zuf-HL-VbJ" firstAttribute="centerY" secondItem="gKe-MI-ehR" secondAttribute="centerY" id="n3L-nR-Mis"/>
-                            <constraint firstItem="eo8-AQ-l6e" firstAttribute="centerX" secondItem="gKe-MI-ehR" secondAttribute="centerX" id="pCw-cQ-d59"/>
                             <constraint firstItem="jGM-cM-O0M" firstAttribute="centerY" secondItem="gKe-MI-ehR" secondAttribute="centerY" constant="-378.5" id="ppE-EQ-Rek"/>
                             <constraint firstItem="jGM-cM-O0M" firstAttribute="centerX" secondItem="gKe-MI-ehR" secondAttribute="centerX" id="whh-LF-dRB"/>
                         </constraints>

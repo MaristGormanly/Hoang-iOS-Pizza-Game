@@ -27,6 +27,7 @@ class DeathViewController: UIViewController {
         
         let vc = storyboard?.instantiateViewController(identifier: "game") as! GameViewController
         vc.modalPresentationStyle = .fullScreen
+        vc.playerName = playerName
         present(vc, animated: true)
         
     }
