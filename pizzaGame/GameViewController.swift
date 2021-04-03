@@ -110,22 +110,22 @@ class GameViewController: UIViewController {
         sender.setTranslation(CGPoint.zero, in: self.view)
         
         if sender.state == .ended {
-            let newPepperoni = "pepperonis.png"
-            let pepperoniImage = UIImage(named: newPepperoni)
-            let pepperoniNew = UIImageView(image: pepperoniImage)
-            pepperoniNew.frame = pepperoniOutlet.frame
-            pepperoniNew.contentMode = pepperoniOutlet.contentMode
-            pepperoniNew.tag = tags
-            view.addSubview(pepperoniNew)
-            
-            pepperoniOutlet.center.x = 135.5
-            pepperoniOutlet.center.y = 667.5
-            
-            pepperoniOn += 1;
-            tags += 1;
-
+            if (pepperoniOutlet.center.x >= 50 && pepperoniOutlet.center.x <= 370 && pepperoniOutlet.center.y >= 280 && pepperoniOutlet.center.y <= 610){
+                let newPepperoni = "pepperonis.png"
+                let pepperoniImage = UIImage(named: newPepperoni)
+                let pepperoniNew = UIImageView(image: pepperoniImage)
+                pepperoniNew.frame = pepperoniOutlet.frame
+                pepperoniNew.contentMode = pepperoniOutlet.contentMode
+                pepperoniNew.tag = tags
+                view.addSubview(pepperoniNew)
+                
+                pepperoniOutlet.center.x = 135.5
+                pepperoniOutlet.center.y = 667.5
+                
+                pepperoniOn += 1;
+                tags += 1;
+            }
         }
-        
     }
     
     @objc func dragPepper(_ sender:UIPanGestureRecognizer){
@@ -135,22 +135,22 @@ class GameViewController: UIViewController {
         sender.setTranslation(CGPoint.zero, in: self.view)
         
         if sender.state == .ended {
-            let newPepper = "peppers.png"
-            let pepperImage = UIImage(named: newPepper)
-            let pepperNew = UIImageView(image: pepperImage)
-            pepperNew.frame = pepperOutlet.frame
-            pepperNew.contentMode = pepperOutlet.contentMode
-            pepperNew.tag = tags
-            view.addSubview(pepperNew)
-            
-            pepperOutlet.center.x = 280
-            pepperOutlet.center.y = 760.5
-            
-            pepperOn += 1;
-            tags += 1;
-
+            if (pepperOutlet.center.x >= 50 && pepperOutlet.center.x <= 370 && pepperOutlet.center.y >= 280 && pepperOutlet.center.y <= 610){
+                let newPepper = "peppers.png"
+                let pepperImage = UIImage(named: newPepper)
+                let pepperNew = UIImageView(image: pepperImage)
+                pepperNew.frame = pepperOutlet.frame
+                pepperNew.contentMode = pepperOutlet.contentMode
+                pepperNew.tag = tags
+                view.addSubview(pepperNew)
+                
+                pepperOutlet.center.x = 280
+                pepperOutlet.center.y = 760.5
+                
+                pepperOn += 1;
+                tags += 1;
+            }
         }
-    
     }
     
     @objc func dragOnion(_ sender:UIPanGestureRecognizer){
@@ -160,20 +160,21 @@ class GameViewController: UIViewController {
         sender.setTranslation(CGPoint.zero, in: self.view)
         
         if sender.state == .ended {
-            let newOnion = "onions.png"
-            let onionImage = UIImage(named: newOnion)
-            let onionNew = UIImageView(image: onionImage)
-            onionNew.frame = onionOutlet.frame
-            onionNew.contentMode = onionOutlet.contentMode
-            onionNew.tag = tags
-            view.addSubview(onionNew)
-            
-            onionOutlet.center.x = 281
-            onionOutlet.center.y = 673
-            
-            onionOn += 1;
-            tags += 1;
-
+            if (onionOutlet.center.x >= 50 && onionOutlet.center.x <= 370 && onionOutlet.center.y >= 280 && onionOutlet.center.y <= 610){
+                let newOnion = "onions.png"
+                let onionImage = UIImage(named: newOnion)
+                let onionNew = UIImageView(image: onionImage)
+                onionNew.frame = onionOutlet.frame
+                onionNew.contentMode = onionOutlet.contentMode
+                onionNew.tag = tags
+                view.addSubview(onionNew)
+                
+                onionOutlet.center.x = 281
+                onionOutlet.center.y = 673
+                
+                onionOn += 1;
+                tags += 1;
+            }
         }
     }
     
@@ -184,21 +185,24 @@ class GameViewController: UIViewController {
         sender.setTranslation(CGPoint.zero, in: self.view)
         
         if sender.state == .ended {
-            let newOlive = "olives.png"
-            let oliveImage = UIImage(named: newOlive)
-            let oliveNew = UIImageView(image: oliveImage)
-            oliveNew.frame = oliveOutlet.frame
-            oliveNew.contentMode = oliveOutlet.contentMode
-            oliveNew.tag = tags
-            view.addSubview(oliveNew)
-            
-            oliveOutlet.center.x = 135
-            oliveOutlet.center.y = 760
-            
-            
-            oliveOn += 1;
-            tags += 1;
-
+            if (oliveOutlet.center.x >= 50 && oliveOutlet.center.x <= 370 && oliveOutlet.center.y >= 280 && oliveOutlet.center.y <= 610){
+                let newOlive = "olives.png"
+                let oliveImage = UIImage(named: newOlive)
+                let oliveNew = UIImageView(image: oliveImage)
+                oliveNew.frame = oliveOutlet.frame
+                oliveNew.contentMode = oliveOutlet.contentMode
+                oliveNew.tag = tags
+                view.addSubview(oliveNew)
+                
+                NSLog("x = " + oliveOutlet.center.x.description)
+                NSLog("y = " + oliveOutlet.center.y.description)
+                
+                oliveOutlet.center.x = 135
+                oliveOutlet.center.y = 760
+                
+                oliveOn += 1;
+                tags += 1;
+            }
         }
     }
     
