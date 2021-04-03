@@ -53,20 +53,22 @@ class ScoreViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        //if the key hiScores holds a value for the default set the hiscores to that value
         var hiScoresDefault = UserDefaults.standard
         if(hiScoresDefault.value(forKey: "hiScores") != nil) {
             hiScores = hiScoresDefault.value(forKey: "hiScores") as! [Int]
         }
         
+        //if the key names holds a value for the default set the names to that value
         var namesDefault = UserDefaults.standard
         if(namesDefault.value(forKey: "names") != nil) {
             names = namesDefault.value(forKey: "names") as! [String]
         }
         
-        while i < 9 {
-            
+        //from 0 to 9
+        while i <= 9 {
+            //keep the highest 10 scores and the names associated with them in descending order
             if(scoreInt > hiScores[i]) {
                 temp = hiScores[i]
                 tempName = names[i]
@@ -78,14 +80,17 @@ class ScoreViewController: UIViewController {
             i += 1
         }
         
+        //reset the index
         i = 0;
         
+        //set the default values of hiscores and names to current with the keys hiscores and names
         hiScoresDefault.setValue(hiScores, forKey: "hiScores")
         hiScoresDefault.synchronize()
         
         namesDefault.setValue(names, forKey: "names")
         namesDefault.synchronize()
         
+        //display the top 10 scores and names associated with them
         score1Label.text = String(hiScores[0])
         score2Label.text = String(hiScores[1])
         score3Label.text = String(hiScores[2])

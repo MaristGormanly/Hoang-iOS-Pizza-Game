@@ -22,7 +22,7 @@ class DeathViewController: UIViewController {
         
     }
     
-    //game screen
+    //go to game screen
     @IBAction func startGame() {
         
         let vc = storyboard?.instantiateViewController(identifier: "game") as! GameViewController
@@ -31,17 +31,19 @@ class DeathViewController: UIViewController {
         
     }
     
-    //hi-score screen
+    //go to hi-score screen
     @IBAction func showHiScores() {
         
         let vc = storyboard?.instantiateViewController(identifier: "scores") as! ScoreViewController
         vc.modalPresentationStyle = .fullScreen
+        //send the score and player information
         vc.scoreInt = scoreInt
         vc.playerName = playerName
         present(vc, animated: true)
         
     }
     
+    //go to the main menu
     @IBAction func mainMenu() {
         let vc = storyboard?.instantiateViewController(identifier: "main") as! ViewController
         vc.modalPresentationStyle = .fullScreen

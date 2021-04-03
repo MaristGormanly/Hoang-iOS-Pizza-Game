@@ -16,18 +16,18 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
-    //game screen
+    //go to the game screen
     @IBAction func startGame() {
         let vc = storyboard?.instantiateViewController(identifier: "game") as! GameViewController
         vc.modalPresentationStyle = .fullScreen
+        //send the text in the username text field
         vc.playerName = usernameText.text!
         present(vc, animated: true)
     }
     
-    //hi-score screen
+    //go to the hi-score screen
     @IBAction func showHiScores() {
         let vc = storyboard?.instantiateViewController(identifier: "scores") as! ScoreViewController
         vc.modalPresentationStyle = .fullScreen
