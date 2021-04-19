@@ -124,6 +124,19 @@ class GameViewController: UIViewController {
         
     }
     
+    override func becomeFirstResponder() -> Bool {
+        return true
+    }
+    
+    //if the user shakes the device
+    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        if (motion == .motionShake) {
+            
+            
+        }
+        
+    }
+    
     //when a pepperoni is dragged
     @objc func dragPepperoni(_ sender:UIPanGestureRecognizer){
         

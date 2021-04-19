@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,12 +23,12 @@
                                     <constraint firstAttribute="height" constant="320" id="D2V-Ut-no7"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="42"/>
-                                <color key="textColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" systemColor="systemYellowColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kt6-TC-UYh">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kt6-TC-UYh">
                                 <rect key="frame" x="107" y="423" width="200" height="50"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="backgroundColor" systemColor="darkTextColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Gsg-rr-d2l"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="hNI-Tv-TrX"/>
@@ -35,15 +37,15 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <state key="normal" title="Start Game">
-                                    <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" systemColor="systemYellowColor"/>
                                 </state>
                                 <connections>
                                     <action selector="startGame" destination="BYZ-38-t0r" eventType="touchUpInside" id="zYe-je-DGI"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9f1-eM-0mJ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9f1-eM-0mJ">
                                 <rect key="frame" x="107" y="481" width="200" height="50"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="backgroundColor" systemColor="darkTextColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="0UO-JM-U47"/>
                                     <constraint firstAttribute="width" constant="200" id="CNN-7w-54Q"/>
@@ -54,15 +56,15 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <state key="normal" title="Hi-Scores">
-                                    <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" systemColor="systemYellowColor"/>
                                 </state>
                                 <connections>
                                     <action selector="showHiScores" destination="BYZ-38-t0r" eventType="touchUpInside" id="pfD-h9-YDT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6v9-Lk-zOM">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6v9-Lk-zOM">
                                 <rect key="frame" x="107" y="539" width="200" height="50"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="backgroundColor" systemColor="darkTextColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="4VQ-H2-jPF"/>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="8Um-4K-bsf"/>
@@ -75,7 +77,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <state key="normal" title="Exit">
-                                    <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" systemColor="systemYellowColor"/>
                                 </state>
                                 <connections>
                                     <action selector="exitApp" destination="BYZ-38-t0r" eventType="touchUpInside" id="Od2-mL-A1g"/>
@@ -99,6 +101,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.76566547927461137" green="0.25616083441378013" blue="0.20053148216145569" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="OAh-p3-ryK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="10p-dt-Bu0"/>
@@ -115,7 +118,6 @@
                             <constraint firstItem="2tc-ff-OAK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yHg-wq-hiW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OAh-p3-ryK" secondAttribute="trailing" constant="20" id="zwk-sB-BBK"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="animatedPizza" destination="cNV-3c-Td4" id="0mk-ma-Pvb"/>
@@ -166,9 +168,9 @@
                                     <constraint firstAttribute="width" constant="148" id="n37-Qx-Lyt"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOw-uC-OC0">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOw-uC-OC0">
                                 <rect key="frame" x="107" y="812" width="200" height="50"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="backgroundColor" systemColor="darkTextColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="6wY-oA-0iU"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Mq9-Mg-fqB"/>
@@ -177,7 +179,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <state key="normal" title="Deliver Pizza">
-                                    <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" systemColor="systemYellowColor"/>
                                 </state>
                                 <connections>
                                     <action selector="checkPizza:" destination="L7I-cK-1KZ" eventType="touchUpInside" id="A2d-dX-j5w"/>
@@ -218,7 +220,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DbX-G9-EcF">
-                                <rect key="frame" x="83" y="86" width="24" height="24"/>
+                                <rect key="frame" x="83.666666666666671" y="86" width="23" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -248,16 +250,6 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="149" id="SK2-eO-Acf"/>
                                     <constraint firstAttribute="height" constant="24" id="aNj-Jg-fVf"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Peppers Ordered" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8LI-6b-sF3">
-                                <rect key="frame" x="234" y="203" width="160" height="24"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="160" id="IQi-FK-laK"/>
-                                    <constraint firstAttribute="height" constant="24" id="mAh-lN-76T"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
@@ -293,14 +285,26 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Peppers Ordered" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8LI-6b-sF3">
+                                <rect key="frame" x="236" y="203" width="167" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="mAh-lN-76T"/>
+                                    <constraint firstAttribute="width" constant="167" id="yJ6-gf-1Z2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="Z0q-pn-32J"/>
+                        <color key="backgroundColor" systemColor="systemGray2Color"/>
                         <accessibility key="accessibilityConfiguration" identifier="game"/>
                         <constraints>
                             <constraint firstItem="8N7-mV-0gk" firstAttribute="centerY" secondItem="lXi-bI-03o" secondAttribute="centerY" constant="219.5" id="2Uq-cw-qD3"/>
                             <constraint firstItem="OE9-I3-2rA" firstAttribute="centerY" secondItem="lXi-bI-03o" secondAttribute="centerY" constant="-265" id="3rN-Lb-dB3"/>
                             <constraint firstItem="DbX-G9-EcF" firstAttribute="centerY" secondItem="lXi-bI-03o" secondAttribute="centerY" constant="-350" id="7px-JW-xxa"/>
                             <constraint firstItem="hvp-fs-mX4" firstAttribute="centerX" secondItem="lXi-bI-03o" secondAttribute="centerX" constant="73" id="8bb-JF-2Au"/>
+                            <constraint firstItem="8LI-6b-sF3" firstAttribute="centerY" secondItem="lXi-bI-03o" secondAttribute="centerY" constant="-233" id="ACe-ii-zav"/>
                             <constraint firstItem="Enp-D6-xd8" firstAttribute="centerY" secondItem="lXi-bI-03o" secondAttribute="centerY" constant="-351" id="DfP-0S-6E0"/>
                             <constraint firstItem="dTK-hd-bpg" firstAttribute="centerX" secondItem="lXi-bI-03o" secondAttribute="centerX" constant="112" id="Dt4-N6-pvQ"/>
                             <constraint firstItem="8LI-6b-sF3" firstAttribute="centerY" secondItem="lXi-bI-03o" secondAttribute="centerY" constant="-233" id="EdK-zr-xnw"/>
@@ -328,6 +332,7 @@
                             <constraint firstItem="Bdz-Mi-0Pj" firstAttribute="centerX" secondItem="lXi-bI-03o" secondAttribute="centerX" constant="-112" id="klg-7J-RZb"/>
                             <constraint firstItem="dOw-uC-OC0" firstAttribute="centerX" secondItem="lXi-bI-03o" secondAttribute="centerX" id="ldg-4B-jzO"/>
                             <constraint firstItem="dTK-hd-bpg" firstAttribute="centerY" secondItem="lXi-bI-03o" secondAttribute="centerY" constant="-201" id="oQx-xT-lDi"/>
+                            <constraint firstItem="8LI-6b-sF3" firstAttribute="centerX" secondItem="lXi-bI-03o" secondAttribute="centerX" constant="112.5" id="qV3-OH-L83"/>
                             <constraint firstItem="3lO-jB-VYx" firstAttribute="centerY" secondItem="lXi-bI-03o" secondAttribute="centerY" constant="-382" id="s2e-uL-Oj7"/>
                             <constraint firstItem="sOU-YR-eUw" firstAttribute="centerY" secondItem="lXi-bI-03o" secondAttribute="centerY" constant="-290" id="sYW-P0-XKj"/>
                             <constraint firstItem="tMD-YR-h1C" firstAttribute="centerX" secondItem="lXi-bI-03o" secondAttribute="centerX" constant="112.5" id="t1z-n0-Ykr"/>
@@ -336,7 +341,6 @@
                             <constraint firstItem="8N7-mV-0gk" firstAttribute="centerX" secondItem="lXi-bI-03o" secondAttribute="centerX" constant="-71.5" id="upR-lt-QyT"/>
                             <constraint firstItem="8N7-mV-0gk" firstAttribute="centerX" secondItem="lXi-bI-03o" secondAttribute="centerX" constant="-71.5" id="zJ8-pT-HhP"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Z0q-pn-32J"/>
                     </view>
                     <connections>
                         <outlet property="button" destination="dOw-uC-OC0" id="GJD-7W-DDf"/>
@@ -364,9 +368,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JR0-dj-D9t">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JR0-dj-D9t">
                                 <rect key="frame" x="105" y="812" width="200" height="50"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="backgroundColor" systemColor="darkTextColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="I2T-Fq-hkE"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="UNG-pA-d2d"/>
@@ -375,7 +379,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <state key="normal" title="Main Menu">
-                                    <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" systemColor="systemYellowColor"/>
                                 </state>
                                 <connections>
                                     <action selector="mainMenu" destination="xwk-xs-Zk2" eventType="touchUpInside" id="rjh-d5-h7d"/>
@@ -512,7 +516,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0LR-cX-a6t">
-                                <rect key="frame" x="353" y="126" width="17" height="29"/>
+                                <rect key="frame" x="353.66666666666669" y="126" width="16" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29" id="nGa-UD-byc"/>
                                 </constraints>
@@ -521,7 +525,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0It-9v-I6w">
-                                <rect key="frame" x="353.33333333333331" y="196" width="16.333333333333314" height="29"/>
+                                <rect key="frame" x="353.66666666666669" y="196" width="16" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29" id="Zcg-yG-cfi"/>
                                 </constraints>
@@ -530,7 +534,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lxm-xq-8Cn">
-                                <rect key="frame" x="353.33333333333331" y="268" width="16.333333333333314" height="29"/>
+                                <rect key="frame" x="353.66666666666669" y="268" width="16" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29" id="yf9-Wt-kBx"/>
                                 </constraints>
@@ -539,7 +543,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IdB-6c-QdW">
-                                <rect key="frame" x="353.33333333333331" y="339" width="16.333333333333314" height="29"/>
+                                <rect key="frame" x="353.66666666666669" y="339" width="16" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29" id="G0v-vU-x8q"/>
                                 </constraints>
@@ -548,7 +552,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kdg-q4-F4I">
-                                <rect key="frame" x="353.33333333333331" y="409" width="16.333333333333314" height="29"/>
+                                <rect key="frame" x="353.66666666666669" y="409" width="16" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29" id="7Sx-SV-98e"/>
                                 </constraints>
@@ -557,7 +561,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WPh-R8-H4b">
-                                <rect key="frame" x="353.33333333333331" y="479" width="16.333333333333314" height="29"/>
+                                <rect key="frame" x="353.66666666666669" y="479" width="16" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29" id="5VF-3U-XXu"/>
                                 </constraints>
@@ -566,7 +570,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jjm-BD-L6R">
-                                <rect key="frame" x="353.33333333333331" y="549" width="16.333333333333314" height="29"/>
+                                <rect key="frame" x="353.66666666666669" y="549" width="16" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29" id="AjV-e3-sEp"/>
                                 </constraints>
@@ -575,7 +579,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bCV-rV-ZBi">
-                                <rect key="frame" x="353.33333333333331" y="620" width="16.333333333333314" height="29"/>
+                                <rect key="frame" x="353.66666666666669" y="620" width="16" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29" id="e2m-qb-xVc"/>
                                 </constraints>
@@ -584,7 +588,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jxU-dP-J38">
-                                <rect key="frame" x="353.33333333333331" y="690" width="16.333333333333314" height="29"/>
+                                <rect key="frame" x="353.66666666666669" y="690" width="16" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29" id="eEI-T4-clo"/>
                                 </constraints>
@@ -618,13 +622,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Placeholder 8" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ph7-s0-Ujz">
-                                <rect key="frame" x="122" y="620" width="156" height="29"/>
+                                <rect key="frame" x="123.00000000000001" y="620" width="154.33333333333337" height="29"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Placeholder 7" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qPy-Zr-BTC">
-                                <rect key="frame" x="125" y="550" width="154" height="29"/>
+                                <rect key="frame" x="126.00000000000001" y="550" width="152.33333333333337" height="29"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -639,7 +643,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Placeholder 5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3jg-OE-9Zd">
-                                <rect key="frame" x="123.33333333333333" y="409" width="154.66666666666669" height="29"/>
+                                <rect key="frame" x="123.66666666666667" y="409" width="153.66666666666663" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29" id="2cR-63-zEe"/>
                                 </constraints>
@@ -657,7 +661,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Placeholder 3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vwa-Os-C3h">
-                                <rect key="frame" x="123.33333333333333" y="268" width="154.66666666666669" height="29"/>
+                                <rect key="frame" x="123.66666666666669" y="268" width="154" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29" id="zeY-jz-MZU"/>
                                 </constraints>
@@ -675,13 +679,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Placeholder 10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="COr-ga-yFV">
-                                <rect key="frame" x="125.33333333333333" y="761" width="167.33333333333337" height="29"/>
+                                <rect key="frame" x="126.00000000000001" y="761" width="166.33333333333337" height="29"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hv0-9e-XHm">
-                                <rect key="frame" x="353.33333333333331" y="761" width="16.333333333333314" height="29"/>
+                                <rect key="frame" x="353.66666666666669" y="761" width="16" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29" id="wZH-4U-7X5"/>
                                 </constraints>
@@ -690,7 +694,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="XfB-zO-TXz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="WPh-R8-H4b" firstAttribute="centerX" secondItem="4sa-jv-hlS" secondAttribute="centerX" constant="154.5" id="1LQ-gD-oT0"/>
                             <constraint firstItem="klI-da-7X7" firstAttribute="centerX" secondItem="4sa-jv-hlS" secondAttribute="centerX" constant="-153" id="2H3-By-Foh"/>
@@ -773,7 +778,6 @@
                             <constraint firstItem="0lw-rB-51T" firstAttribute="centerX" secondItem="4sa-jv-hlS" secondAttribute="centerX" constant="-152.5" id="yfe-bz-O3a"/>
                             <constraint firstItem="3jg-OE-9Zd" firstAttribute="centerY" secondItem="4sa-jv-hlS" secondAttribute="centerY" constant="-24.5" id="zT7-zc-VxY"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="XfB-zO-TXz"/>
                     </view>
                     <connections>
                         <outlet property="name10Label" destination="COr-ga-yFV" id="EQL-jv-pHD"/>
@@ -810,9 +814,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zuf-HL-VbJ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zuf-HL-VbJ">
                                 <rect key="frame" x="107" y="423" width="200" height="50"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="backgroundColor" systemColor="darkTextColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="7Qo-Qn-wX1"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="DLb-28-XPc"/>
@@ -823,15 +827,15 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <state key="normal" title="Main Menu">
-                                    <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" systemColor="systemYellowColor"/>
                                 </state>
                                 <connections>
                                     <action selector="mainMenu" destination="dJ8-Hl-MHj" eventType="touchUpInside" id="Mtm-28-851"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eo8-AQ-l6e">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eo8-AQ-l6e">
                                 <rect key="frame" x="107" y="481" width="200" height="50"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="backgroundColor" systemColor="darkTextColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="9bv-Sa-a3d"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="FKA-kB-dkF"/>
@@ -842,7 +846,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <state key="normal" title="Submit Hi-Score">
-                                    <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" systemColor="systemYellowColor"/>
                                 </state>
                                 <connections>
                                     <action selector="showHiScores" destination="dJ8-Hl-MHj" eventType="touchUpInside" id="odY-8D-kfg"/>
@@ -866,9 +870,9 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xjj-Af-ab4">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xjj-Af-ab4">
                                 <rect key="frame" x="107" y="539" width="200" height="50"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="backgroundColor" systemColor="darkTextColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="8lI-Ks-jRJ"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="IC1-5g-h8e"/>
@@ -879,14 +883,15 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <state key="normal" title="Play Again">
-                                    <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" systemColor="systemYellowColor"/>
                                 </state>
                                 <connections>
                                     <action selector="startGame" destination="dJ8-Hl-MHj" eventType="touchUpInside" id="Njb-Em-OEW"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="fiF-S2-1qT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="55W-sf-hRM" firstAttribute="centerY" secondItem="gKe-MI-ehR" secondAttribute="centerY" constant="-249.5" id="85a-VO-Ent"/>
                             <constraint firstItem="eo8-AQ-l6e" firstAttribute="centerX" secondItem="gKe-MI-ehR" secondAttribute="centerX" id="Hzw-UF-rxW"/>
@@ -899,7 +904,6 @@
                             <constraint firstItem="jGM-cM-O0M" firstAttribute="centerY" secondItem="gKe-MI-ehR" secondAttribute="centerY" constant="-378.5" id="ppE-EQ-Rek"/>
                             <constraint firstItem="jGM-cM-O0M" firstAttribute="centerX" secondItem="gKe-MI-ehR" secondAttribute="centerX" id="whh-LF-dRB"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="fiF-S2-1qT"/>
                     </view>
                     <connections>
                         <outlet property="scoreLabel" destination="55W-sf-hRM" id="U4R-gN-6v9"/>
@@ -916,5 +920,17 @@
         <image name="pepperonis" width="268" height="254"/>
         <image name="peppers" width="570" height="438"/>
         <image name="pizza" width="500" height="499"/>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>
