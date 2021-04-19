@@ -20,6 +20,9 @@
 		215699B5260FE89B0040EC9C /* pizzaGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215699B4260FE89B0040EC9C /* pizzaGameUITests.swift */; };
 		215699C3261042F50040EC9C /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215699C2261042F50040EC9C /* GameViewController.swift */; };
 		215699C7261049270040EC9C /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215699C6261049270040EC9C /* ScoreViewController.swift */; };
+		21D7BB6D262DDBC300EF9F30 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 21D7BB6C262DDBC300EF9F30 /* music.mp3 */; };
+		21D7BB75262DE3EB00EF9F30 /* button_click.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 21D7BB74262DE3EB00EF9F30 /* button_click.mp3 */; };
+		21D7BB7A262DE64C00EF9F30 /* bell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 21D7BB79262DE64C00EF9F30 /* bell.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,9 @@
 		215699B6260FE89B0040EC9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		215699C2261042F50040EC9C /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		215699C6261049270040EC9C /* ScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
+		21D7BB6C262DDBC300EF9F30 /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
+		21D7BB74262DE3EB00EF9F30 /* button_click.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = button_click.mp3; sourceTree = "<group>"; };
+		21D7BB79262DE64C00EF9F30 /* bell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bell.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +119,9 @@
 				21569994260FE8980040EC9C /* SceneDelegate.swift */,
 				21569996260FE8980040EC9C /* ViewController.swift */,
 				21569998260FE8980040EC9C /* Main.storyboard */,
+				21D7BB6C262DDBC300EF9F30 /* music.mp3 */,
+				21D7BB79262DE64C00EF9F30 /* bell.mp3 */,
+				21D7BB74262DE3EB00EF9F30 /* button_click.mp3 */,
 				2104D6A12618EDA100D450CF /* pizzaSliceAnimated.gif */,
 				2156999B260FE89B0040EC9C /* Assets.xcassets */,
 				2156999D260FE89B0040EC9C /* LaunchScreen.storyboard */,
@@ -206,7 +215,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1150;
-				LastUpgradeCheck = 1150;
+				LastUpgradeCheck = 1240;
 				ORGANIZATIONNAME = "Timothy Hoang";
 				TargetAttributes = {
 					2156998E260FE8980040EC9C = {
@@ -247,8 +256,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21D7BB6D262DDBC300EF9F30 /* music.mp3 in Resources */,
 				2156999F260FE89B0040EC9C /* LaunchScreen.storyboard in Resources */,
 				2156999C260FE89B0040EC9C /* Assets.xcassets in Resources */,
+				21D7BB7A262DE64C00EF9F30 /* bell.mp3 in Resources */,
+				21D7BB75262DE3EB00EF9F30 /* button_click.mp3 in Resources */,
 				2156999A260FE8980040EC9C /* Main.storyboard in Resources */,
 				2104D6A22618EDA100D450CF /* pizzaSliceAnimated.gif in Resources */,
 			);
@@ -362,6 +374,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -422,6 +435,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;

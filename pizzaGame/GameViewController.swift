@@ -6,6 +6,7 @@
 //  Copyright © 2021 Timothy Hoang. All rights reserved.
 //
 
+import AVFoundation
 import UIKit
 
 class GameViewController: UIViewController {
@@ -30,6 +31,10 @@ class GameViewController: UIViewController {
     @IBOutlet weak var oliveOutlet: UIImageView!
     @IBOutlet weak var pepperOutlet: UIImageView!
     
+    //our music player
+    var player: AVAudioPlayer?
+    var player2: AVAudioPlayer?
+    
     //set initial values
     var scoreInt = 0
     var playerName = ""
@@ -49,6 +54,29 @@ class GameViewController: UIViewController {
     //on view load
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //set up player and play
+        let musicUrlString = Bundle.main.path(forResource: "music", ofType: "mp3")
+        
+        do {
+            try AVAudioSession.sharedInstance().setMode(.default)
+            try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
+            
+            guard let musicUrlString = musicUrlString else {
+                return
+            }
+            
+            player = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: musicUrlString))
+            
+            guard let player = player else {
+                return
+            }
+            
+            player.play()
+        }
+        catch {
+            
+        }
         
         //allows you to modify the views
         self.pepperoniOutlet.translatesAutoresizingMaskIntoConstraints = true
@@ -216,6 +244,11 @@ class GameViewController: UIViewController {
         //If the timer reaches 0
         if (gameInt == 0) {
             gameTimer.invalidate()
+            
+            if let player = player, player.isPlaying {
+                //stop playback
+                player.stop()
+            }
 
             //go to the death screen
             let vc = storyboard?.instantiateViewController(identifier: "death") as! DeathViewController
@@ -230,6 +263,7 @@ class GameViewController: UIViewController {
     
     //when the button is clicked, run checkPizza
     @IBAction func checkPizza(_ sender: Any) {
+        
         
         //while there is more than 1 tag
         while tags >= 1 {
@@ -246,6 +280,29 @@ class GameViewController: UIViewController {
         
         //if the types and amounts of toppings placed on the pizza match the types and amounts needed
         if (pepperoniOn == pepperoniAmount && onionOn == onionAmount && pepperOn == pepperAmount && oliveOn == oliveAmount) {
+            
+            //set up player and play
+            let bellUrlString = Bundle.main.path(forResource: "bell", ofType: "mp3")
+            
+            do {
+                try AVAudioSession.sharedInstance().setMode(.default)
+                try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
+                
+                guard let bellUrlString = bellUrlString else {
+                    return
+                }
+                
+                player2 = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: bellUrlString))
+                
+                guard let player2 = player2 else {
+                    return
+                }
+                
+                player2.play()
+            }
+            catch {
+                
+            }
             
             //increase the score by 1
             scoreInt += 1
@@ -278,6 +335,11 @@ class GameViewController: UIViewController {
         else {
             //stop the timer
             gameTimer.invalidate()
+            
+            if let player = player, player.isPlaying {
+                //stop playback
+                player.stop()
+            }
 
             //go to the death screen
             let vc = storyboard?.instantiateViewController(identifier: "death") as! DeathViewController
