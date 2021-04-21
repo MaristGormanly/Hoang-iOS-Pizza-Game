@@ -34,6 +34,7 @@ class GameViewController: UIViewController {
     //our music player
     var player: AVAudioPlayer?
     var player2: AVAudioPlayer?
+    var player3: AVAudioPlayer?
     
     //set initial values
     var scoreInt = 0
@@ -131,6 +132,29 @@ class GameViewController: UIViewController {
     //if the user shakes the device
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         if (motion == .motionShake) {
+            
+            //set up player and play
+            let scrapeUrlString = Bundle.main.path(forResource: "scrape", ofType: "mp3")
+            
+            do {
+                try AVAudioSession.sharedInstance().setMode(.default)
+                try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
+                
+                guard let scrapeUrlString = scrapeUrlString else {
+                    return
+                }
+                
+                player3 = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: scrapeUrlString))
+                
+                guard let player3 = player3 else {
+                    return
+                }
+                
+                player3.play()
+            }
+            catch {
+                
+            }
             
             //while there is more than 1 tag
             while tags >= 1 {
