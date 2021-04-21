@@ -132,7 +132,25 @@ class GameViewController: UIViewController {
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         if (motion == .motionShake) {
             
+            //while there is more than 1 tag
+            while tags >= 1 {
+                //remove the image (all the placed toppings)
+                let viewWithTag = self.view.viewWithTag(tags)
+                viewWithTag?.removeFromSuperview()
+                tags -= 1
+            }
             
+            //set the tags to 1
+            if(tags == 0) {
+                tags = 1
+            }
+            
+            //reset the toppings on the pizza
+            pepperoniOn = 0
+            onionOn = 0
+            pepperOn = 0
+            oliveOn = 0
+              
         }
         
     }
